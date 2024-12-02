@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Page Title -->
+        <title> GSMS </title>
+
+        <!-- Meta Tags for proper rendering and responsive design -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        
+        <!-- CSRF Token for security (used in forms to prevent CSRF attacks) -->
+        <meta name="csrf-token" content="kmapods5wQ5L1hn7rcR9OPst7EsN0gC7SrHh3m9K"/>
+
+        <!-- External Stylesheets -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,600,700">
+        <link media="all" type="text/css" rel="stylesheet" href="css/bootstrap.min.css"> <!-- Bootstrap -->
+        <link media="all" type="text/css" rel="stylesheet" href="css/style.css?v=1.0"> <!-- Custom Styles -->
+        <link media="all" type="text/css" rel="stylesheet" href="css/sidebar-menu.css?v=1.0"> <!-- Sidebar Styles -->
+        <link media="all" type="text/css" rel="stylesheet" href="css/custom.css?v=1.3.3"> <!-- Additional Custom Styles -->
+
+    </head>
+    <body class="tooltips">
+        <!-- Main Container -->
+        <div class="container">
+
+            <!-- Header Section -->
+            <div class="header content rows-content-header">
+                <!-- Mobile Menu Button (Hamburger) -->
+                <button class="button-menu-mobile show-sidebar">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <!-- Navbar for Navigation Links -->
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav visible-lg visible-md limit-chars">
+                                <!-- Breadcrumb navigation -->
+                                <ul class="breadcrumb">
+                                    <a href="index.html">
+                                        <i class="zmdi zmdi-view-dashboard zmdi-hc-fw" title="Orders"></i> <!-- Orders Icon -->
+                                    </a>
+                                    <a href="manage-product.html">
+                                        <i class="zmdi zmdi-assignment zmdi-hc-fw" title="Products"></i> <!-- Products Icon -->
+                                    </a>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Section -->
+            <div class="right content-page">
+                <div class="body content rows scroll-y">
+                    <!-- Form for GSMS -->
+                    <form class="form-horizontal" action="">
+                        <div class="box-info full" id="taskFormContainer">
+                            <h2>Grocery Store Management System</h2>
+
+                            <div class="panel-body pt-0">
+                                <!-- Buttons for New Order and Manage Products -->
+                                <div class="row mb-4">
+                                    <div class="col-sm-12">
+                                        <a href="order.html" class="btn btn-sm btn-primary pull-right ml-3">
+                                            New Order
+                                        </a>
+                                        <a href="manage-product.html" class="btn btn-sm btn-primary pull-right">
+                                            Manage Products
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Table to display orders -->
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <th>Date</th>
+                                        <th>Order Number</th>
+                                        <th>Customer Name</th>
+                                        <th>Total Cost</th>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Order rows will be inserted here dynamically -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Modal for User Profile (Currently empty) -->
+                    <div class="modal" id="userProfileModal" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body text-center">
+                                    <!-- User Profile Info will be dynamically inserted here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading Modal (Displays spinner while waiting) -->
+            <div class="modal fade-scale" id="myModal" role="dialog" data-backdrop="static">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-body text-center">
+                            <!-- Spinner Image while data is loading -->
+                            <img src="https://demo.test.cloint.com/assets/images/spinner.gif" width="40" style="margin: 60px auto;" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    <!-- External JS Scripts -->
+    <script src="js/packages/jquery.min.js"></script> <!-- jQuery -->
+    <script src="js/custom/common.js"></script> <!-- Common JS Functions -->
+    <script src="js/custom/dashboard.js"></script> <!-- Dashboard Specific JS -->
+
+</html>

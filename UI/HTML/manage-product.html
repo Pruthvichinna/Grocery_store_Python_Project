@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Page Title -->
+    <title> GSMS </title>
+
+    <!-- Meta Tags for proper rendering and responsive design -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    
+    <!-- CSRF Token for security (used in forms to prevent CSRF attacks) -->
+    <meta name="csrf-token" content="kmapods5wQ5L1hn7rcR9OPst7EsN0gC7SrHh3m9K"/>
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,600,700">
+    <link media="all" type="text/css" rel="stylesheet" href="css/bootstrap.min.css"> <!-- Bootstrap -->
+    <link media="all" type="text/css" rel="stylesheet" href="css/style.css?v=1.0"> <!-- Custom Styles -->
+    <link media="all" type="text/css" rel="stylesheet" href="css/sidebar-menu.css?v=1.0"> <!-- Sidebar Styles -->
+    <link media="all" type="text/css" rel="stylesheet" href="css/custom.css?v=1.3.3"> <!-- Additional Custom Styles -->
+
+</head>
+<body class="tooltips">
+<!-- Main Container -->
+<div class="container">
+
+    <!-- Header Section -->
+    <div class="header content rows-content-header">
+        <!-- Mobile Menu Button (Hamburger) -->
+        <button class="button-menu-mobile show-sidebar">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- Navbar for Navigation Links -->
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav visible-lg visible-md limit-chars">
+                        <!-- Breadcrumb navigation -->
+                        <ul class="breadcrumb">
+                            <a href="index.html">
+                                <i class="zmdi zmdi-view-dashboard zmdi-hc-fw" title="Orders"></i> <!-- Orders Icon -->
+                            </a>
+                            <a href="manage-product.html">
+                                <i class="zmdi zmdi-assignment zmdi-hc-fw" title="Products"></i> <!-- Products Icon -->
+                            </a>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="right content-page">
+        <div class="body content rows scroll-y">
+            <div class="box-info full" id="taskFormContainer">
+                <h2>Manage Products</h2>
+                <div class="panel-body pt-0">
+                    <!-- Button to open modal for adding a new product -->
+                    <div class="row mb-4">
+                        <div class="col-sm-12">
+                            <button type="button" class="btn btn-sm btn-primary pull-right" data-toggle="modal" data-target="#productModal">
+                                Add New Product
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Table to display product details -->
+                    <table class="table table-bordered">
+                        <thead>
+                        <th>Name</th>
+                        <th>Unit</th>
+                        <th>Price Per Unit</th>
+                        <th style="width: 150px">Action</th>
+                        </thead>
+                        <tbody>
+                            <!-- Product rows will be inserted here dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal to add a new product -->
+    <div class="modal fade-scale" id="productModal" role="dialog" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Add New Product</h4>
+                </div>
+
+                <!-- Modal Body with Form -->
+                <div class="modal-body">
+                    <form id="productForm">
+                        <!-- Hidden input to store the product ID -->
+                        <input type="hidden" name="id" id="id" value="0">
+
+                        <div class="row">
+                            <!-- Product Name Input -->
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input class="form-control" placeholder="Name" name="name" id="name" type="text" value="">
+                                </div>
+                            </div>
+
+                            <!-- Unit of Measure (UOM) Dropdown -->
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label>Unit</label>
+                                    <select name="uoms" id="uoms" class="form-control">
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Price Per Unit Input -->
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label>Price Per Unit</label>
+                                    <input class="form-control" placeholder="Price Per Unit" name="price" id="price" type="text" value="">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Modal Footer with Close and Save Buttons -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="saveProduct">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- External JS Scripts -->
+<script src="js/packages/jquery.min.js"></script> <!-- jQuery -->
+<script src="js/custom/common.js"></script> <!-- Common JS Functions -->
+<script src="js/custom/manage-product.js"></script> <!-- Manage Product Specific JS -->
+<script src="js/packages/bootstrap.min.js"></script> <!-- Bootstrap JS -->
+
+</body>
+</html>
